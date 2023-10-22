@@ -8,6 +8,7 @@ function App() {
   return (
     <Router>
       <NavigationBar />
+      <LandingPage />
       <Routes>
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/buy' component={BuyStable} />
