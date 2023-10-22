@@ -11,6 +11,8 @@ function App() {
       <Routes>
         <Route exact path='/' element={<LandingPage />} />
         <Route exact path='/buy' element={<BuyStable />} />
+        <Route exact path='/sell' element={<BuyStable />} />
+        <Route exact path='/dashboard' element={<BuyStable />} />
       </Routes>
     </Router>
   );

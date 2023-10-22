@@ -9,10 +9,13 @@ const NavigationBar = () => {
           <Link to='/'>Home</Link>
         </li>
         <li>
+          <Link to='/dashboard'>Dashboard</Link>
+        </li>
+        <li>
           <Link to='/buy'>Buy</Link>
         </li>
         <li>
-          <a href='#section3'>Section 3</a>
+          <Link to='/sell'>Sell</Link>
         </li>
       </ul>
     </nav>
