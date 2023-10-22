@@ -1,14 +1,19 @@
 import React from 'react';
 import LandingPage from './LandingPage';
 import NavigationBar from './NavBar'; // Import the NavigationBar component
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import BuyStable from './Buy';
 
 function App() {
   return (
-    <div className='App'>
-      <NavigationBar /> {/* Add the NavigationBar component here */}
+    <Router>
+      <NavigationBar />
       <LandingPage />
-      {/* Add other app routes/components here */}
-    </div>
+      <Routes>
+        <Route exact path='/' component={LandingPage} />
+        <Route exact path='/buy' component={BuyStable} />
+      </Routes>
+    </Router>
   );
 }
 
