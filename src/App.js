@@ -8,7 +8,6 @@ function App() {
   return (
     <Router>
       <NavigationBar />
-      <LandingPage />
       <Routes>
         <Route exact path='/' element={<LandingPage />} />
         <Route exact path='/buy' element={<BuyStable />} />
