@@ -48,7 +48,7 @@ export default function Login() {
       // request message signature from users.
       signature={{ message: 'I want to purchase stablecoins' }}
       // retrieve the Sismo Connect Reponse from the user's Sismo data vault
-      onResponse={async (response: SismoConnectResponse) => {
+      onResponse={async (response) => {
         const res = await fetch('/api/verify', {
           method: 'POST',
           body: JSON.stringify(response),
@@ -56,7 +56,7 @@ export default function Login() {
         console.log(await res.json());
       }}
       // reponse in bytes to call a contract
-      onResponseBytes={async (response: string) => {
+      onResponseBytes={async (response) => {
         console.log(response);
       }}
     />
