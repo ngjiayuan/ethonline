@@ -17,6 +17,7 @@ export default function Login() {
   const handleLogin = () => {
     // Perform login logic here
     // If login is successful, navigate to the dashboard
+    console.log('moving to buy')
     navigate('/buy');
   };
 
@@ -64,11 +65,11 @@ export default function Login() {
           body: JSON.stringify(response),
         });
         console.log(await res.json());
-        handleLogin();
       }}
       // reponse in bytes to call a contract
       onResponseBytes={async (response) => {
         console.log(response);
+        handleLogin();
       }}
     />
   );
