@@ -8,8 +8,18 @@ import {
   SismoConnectResponse,
   ClaimType,
 } from '@sismo-core/sismo-connect-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+  const navigate = useNavigate();
+
+  // If login is successful, redirect to the dashboard
+  const handleLogin = () => {
+    // Perform login logic here
+    // If login is successful, navigate to the dashboard
+    navigate('/buy');
+  };
+
   return (
     <SismoConnectButton
       config={{
@@ -54,6 +64,7 @@ export default function Login() {
           body: JSON.stringify(response),
         });
         console.log(await res.json());
+        handleLogin();
       }}
       // reponse in bytes to call a contract
       onResponseBytes={async (response) => {
